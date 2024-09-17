@@ -14,7 +14,7 @@
 本项目仅供测试 Sheas Cealer 的 单次规则注入量 极限，无意绕过任何审查设备的审查
 
 ## 下载地址
-Github Release: [https://github.com/SpaceTimee/Console-HostGenerator/releases](https://github.com/SpaceTimee/Console-Generator/releases)
+Github Release: [https://github.com/SpaceTimee/Console-HostGenerator/releases](https://github.com/SpaceTimee/Console-HostGenerator/releases)
 
 ## 食用方式
 在 pwsh 7.x 环境中运行 Console-HostGenerator.ps1 脚本 -> 按照提示操作即可

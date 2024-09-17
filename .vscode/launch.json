@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Console-HostGenerator",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}/Console-HostGenerator.ps1",
+            "args": []
+        }
+    ]
+}
