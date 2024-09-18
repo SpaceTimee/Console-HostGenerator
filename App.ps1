@@ -13,7 +13,7 @@ Class App {
     hidden [string] GetHostPath() {
         [string] $hostPath = [string]::Empty
 
-        while (-not (Test-Path $hostPath)) {
+        while (-not (Test-Path $hostPath -PathType Container)) {
             $hostPath = (Read-Host "输入 Cealing-Host-List.json 文件保存目录路径 (默认脚本根目录)").Trim("""")
 
             if ([string]::IsNullOrWhiteSpace($hostPath)) { $hostPath = $PSScriptRoot }
