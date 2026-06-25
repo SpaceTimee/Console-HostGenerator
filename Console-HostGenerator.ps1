@@ -1,7 +1,9 @@
 ﻿param ([string] $trans, [switch] $loop)
 
 do {
-    if (Test-Path $trans) { Start-Transcript (Join-Path $trans "Trans.log") -UseMinimalHeader | Out-Null }
+    if (Test-Path -LiteralPath $trans -PathType Container) {
+        Start-Transcript -LiteralPath (Join-Path $trans "Trans.log") -UseMinimalHeader | Out-Null
+    }
 
     if ($PSEdition -ne "Core") {
         Write-Host "该脚本需要在 PowerShell 7.x 环境运行"
@@ -14,8 +16,9 @@ do {
         [App]::new().Main()
     }
 
-    if (Test-Path $trans) { Stop-Transcript }
+    if (Test-Path -LiteralPath $trans -PathType Container) { Stop-Transcript }
     if ($loop) { Start-Sleep 60 }
-} while ($loop)
+}
+while ($loop)
 
 Read-Host "按回车键结束"
