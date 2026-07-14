@@ -7,9 +7,6 @@
 
 * 适用平台: Any
 
-## 词汇解释
-**[Sheas Cealer Dictionary](https://github.com/SpaceTimee/Sheas-Cealer/wiki/Sheas-Cealer-Dictionary)**
-
 ## 注意事项
 本项目仅供测试 Sheas Cealer 的 单次规则注入量 极限，无意绕过任何审查设备的审查
 
