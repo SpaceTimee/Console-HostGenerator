@@ -3,7 +3,7 @@
 </br>
 
 ## 自我介绍
-**Console HostGenerator**: 一只基于 **Pwsh(.Net8)** 的 Cealing Host 自动化生成工具 (目前仅支持从 GFWList 生成)
+**Console HostGenerator**: 一只基于 **Pwsh(.Net8)** 的 Cealing Host 自动化生成脚本 (目前仅支持从 GFWList 生成)
 
 * 适用平台: Any
 

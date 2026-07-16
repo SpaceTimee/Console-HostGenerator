@@ -1,4 +1,4 @@
-﻿param ([string] $trans, [switch] $loop)
+﻿param ([string] $trans, [switch] $loop, [string] $out)
 
 do {
     if (Test-Path -LiteralPath $trans -PathType Container) {
@@ -13,7 +13,7 @@ do {
             if ($ps1File.FullName -ne $PSCommandPath) { . $ps1File.FullName }
         }
 
-        [App]::new().Main()
+        [App]::new().Main($out)
     }
 
     if (Test-Path -LiteralPath $trans -PathType Container) { Stop-Transcript }

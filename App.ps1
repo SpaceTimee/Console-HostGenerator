@@ -1,9 +1,9 @@
 using namespace System.Text
 
 Class App {
-    [void] Main() {
+    [void] Main([string] $out) {
         $this.Welcome()
-        $this.GenerateHost($this.GetHostPath())
+        $this.GenerateHost($this.GetHostPath($out))
         $this.Closing()
     }
 
@@ -12,8 +12,8 @@ Class App {
         Write-Host "Console HostGenerator 启动!" -ForegroundColor Red
     }
 
-    hidden [string] GetHostPath() {
-        [string] $hostPath = [string]::Empty
+    hidden [string] GetHostPath([string] $out) {
+        [string] $hostPath = $out
 
         while (-not (Test-Path -LiteralPath $hostPath -PathType Container)) {
             $hostPath = (Read-Host "输入 Cealing-Host-List.json 文件保存目录路径 (默认脚本根目录)").Trim("""")
